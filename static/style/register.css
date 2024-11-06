@@ -115,3 +115,11 @@ input:focus{
 #botoes a:hover{
     cursor: pointer;
 }
+
+/* Variaveis Flash */
+
+#msg{
+    max-width: 220px;
+    margin: 2rem 0 0 0;
+    text-align: center;
+}

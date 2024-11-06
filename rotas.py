@@ -1,41 +1,66 @@
 from flask import Flask, render_template, url_for, redirect, request, flash
-from app import app
+from sis_autenticar import sis_autenticar
 import hashlib
 import mysql.connector
-from Flask.autenticar.conexao import Conexao
+from conexao import Conexao
 
-@app.route("/")
+@sis_autenticar.route("/")
 def home():
     return render_template("home.html")
 
-@app.route("/register", methods=['POST', 'GET'])
+@sis_autenticar.route("/register", methods=['POST', 'GET'])
 def cadastrar():
     
     if request.method == 'POST':
         
-        nome = request.form.get('nome')    
+        nome = request.form.get('nome')  
         usuario = request.form.get('usuario')
         senha = request.form.get('senha')
         senha_cripto = hashlib.sha256(senha.encode()).hexdigest()
         
-        sql = "INSERT INTO USUARIOS(NOME,USUARIO,SENHA) VALUES(%s, %s, %s)"
+        cnx = Conexao()
+        cursor = cnx.cursor()
         
         try:
-            if nome == None:
-                flash("O Nome não pode estar vazio")
+            # Verifica o tamanho do nome
+            if len(nome) < 7:
+                flash("O Nome muito curto!")
                 return redirect("/register")
-            if usuario == None:
-                flash("O Usuario não pode estar vazio")
+            
+            # Verifica o tamanho do usuario
+            if len(usuario) < 5:
+                flash("Nome de usuario muito curto!")
                 return redirect("/register")
-            if len(senha) > 10:
+            
+            # Verifica se o Usuario ja existe
+            def verificar_usuarios():
+                sql_pegar_usuarios = "SELECT USUARIO FROM USUARIOS"
+                cursor.execute(sql_pegar_usuarios)
+                
+                usuarios_existentes = cursor.fetchall()
+                usuarios_existentes = [item[0] for item in usuarios_existentes]
+                
+                for usuarios in usuarios_existentes:
+                    if usuarios == usuario:
+                        return "O usuarios inserido ja existe!"
+                    
+            verifica_usuarios = verificar_usuarios()
+            if verifica_usuarios == "O usuarios inserido ja existe!":
+                flash(verifica_usuarios)
+                return render_template("register.html")
+                
+                
+            # Verifica o tamanho da senha
+            if len(senha) < 10:
                 flash("Sua senha deve ter pelo menos 10 caracteres!")
-                return redirect("/")
+                return render_template("register.html")
             
-            cnx = Conexao()
-            cursor = cnx.cursor()
-            comando = (sql, (nome,usuario,senha_cripto))
+            #Dados para serem inseridos
+            dados = nome, usuario, senha_cripto
             
-            cursor.execute(comando)
+            #Cadastrando o usuario
+            sql_cadastra_usuario = "INSERT INTO USUARIOS(NOME,USUARIO,SENHA) VALUES(%s, %s, %s)"
+            cursor.execute(sql_cadastra_usuario, dados)
             cnx.commit()
             return redirect("/register")    
         
@@ -46,7 +71,7 @@ def cadastrar():
         return render_template("register.html")
 
 
-@app.route("/welcome",  methods=['POST', 'GET'])
+@sis_autenticar.route("/welcome",  methods=['POST', 'GET'])
 def autentica():
     
     if request.method == 'POST':
