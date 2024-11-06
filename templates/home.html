@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Samuel Souza">
+    <link rel="stylesheet" href="../static/style/home.css">
+    <title>Sistema de Autenticação</title>
+</head>
+<body>
+    <main>
+        <form action="/online" method="POST">
+            <h1 id="titulo">Entrar</h1>
+            
+            <div id="campo-usuario">
+                <label for="usuario">Usuario:</label>
+                <div id="ipt-usuario">
+                    <i class="fa-solid fa-user" style="color: #000000;"></i>
+                    <input type="text" name="usuario" id="usuario" placeholder="Digite seu usuario...">
+                </div>
+            </div>
+            <div id="campo-senha">
+                <label for="senha">Senha:</label>
+                <div id="ipt-senha">
+                    <i class="fa-solid fa-lock" style="color: #000000;"></i>
+                    <input type="password" name="senha" id="senha" placeholder="Digite seu usuario...">
+                </div>
+            </div>
+            
+            <div class="botoes">
+                <div id="campo-entrar">
+                    <i class="fa-solid fa-right-to-bracket fa-xs" style="color: #ffffff;"></i>
+                    <input type="submit" value="Entrar">
+                </div>
+                <div id="campo-registrar">
+                    <i class="fa-solid fa-user-plus fa-xs" style="color: #ffffff;"></i>
+                    <a href="/register">Cadastrar</a>
+                </div>
+        </form>
+
+    </main>
+    <script src="https://kit.fontawesome.com/f59b0f7f02.js" crossorigin="anonymous"></script>    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Samuel Souza">
+    <link rel="stylesheet" href="../static/style/register.css">
+    <title>Cadastrar</title>
+</head>
+<body>
+    <main>
+        <h1 id="titulo">Cadastrar</h1>
+
+        <form action="/register" method="POST">
+
+            <div id="campo-nome">
+                <label for="nome">Nome:</label>
+                <div id="ipt-nome">
+                    <i class="fa-solid fa-user" style="color: #000000;"></i>
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome...">
+                </div>
+            </div>
+
+            <div id="campo-usuario">
+                <label for="usuario">Usuario: </label>
+                <div id="ipt-usuario">
+                    <i class="fa-solid fa-user" style="color: #000000;"></i>
+                    <input type="text" name="usuario" id="usuario" placeholder="Digite seu usuario...">
+                </div>
+            </div>
+
+            <div id="campo-senha">
+                <label for="senha">Senha: </label>
+                <div id="ipt-senha">
+                    <i class="fa-solid fa-key" style="color: #000000;"></i>
+                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha...">
+                </div>
+            </div>
+            {%set mensagens = get_flashed_messages()%}
+            {%if mensagens%}
+                <p id="msg"> {{mensagens[0]}} </p>
+            {%endif%}
+            <div id="botoes">
+                <input type="submit" value="Cadastrar">
+                <a href="/">Voltar</a>
+            </div>
+        </form>
+    </main>
+    <script src="https://kit.fontawesome.com/f59b0f7f02.js" crossorigin="anonymous"></script> 
+</body>
+</html>
