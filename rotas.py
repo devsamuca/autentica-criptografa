@@ -24,17 +24,24 @@ def home():
             
             consulta = cursor.fetchall()
             
-            v_nome = [v_nome[0] for v_nome in consulta]
-            v_usuario = [v_usuario[1] for v_usuario in consulta]
-            v_senha = [v_senha[2] for v_senha in consulta]
+            if consulta == []:
+                flash("Usuario não encontrado")
+                return "Usuario não encontrado"
             
-            return v_nome,v_senha,v_usuario
+            else:
+                v_nome = [v_nome[0] for v_nome in consulta]
+                v_usuario = [v_usuario[1] for v_usuario in consulta]
+                v_senha = [v_senha[2] for v_senha in consulta]            
+                return v_nome,v_senha,v_usuario
             
         resultado = validar()
-        print(resultado)
-            
-
-        return render_template("welcome.html", usuario=usuario, senha=hash_senha)
+        
+        if resultado == "Usuario não encontrado":
+            flash(resultado)
+            return redirect("/")
+        else: 
+            return render_template("welcome.html")
+        
     else:
         return render_template("home.html")
 

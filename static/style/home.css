@@ -18,8 +18,8 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1rem;
     align-items: center;
+    padding: 1rem;
     border-radius: 1rem;
     border: 1px solid;
     backdrop-filter: blur(20px);
@@ -115,3 +115,17 @@ input[type="password"]::placeholder{
 
 /*  */
 /*  */
+
+/* Variaveis Flask */
+
+#msg{
+    max-width: 220px;
+    margin: 0;
+    text-align: center;
+}
+
+#msg_flash{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
