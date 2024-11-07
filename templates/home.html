@@ -11,7 +11,7 @@
     <main>
 
         <form action="/" method="POST">
-            <h1 id="titulo">Entrar</h1>
+            <h1 id="titulo">Autenticar</h1>
             
             <div id="campo-usuario">
                 <label for="usuario">Usuario:</label>
@@ -36,14 +36,13 @@
             {%endif%}
 
             <div class="botoes">
-                <div id="campo-entrar">
-                    <i class="fa-solid fa-right-to-bracket fa-xs" style="color: #ffffff;"></i>
-                    <input type="submit" value="Entrar">
-                </div>
                 <div id="campo-registrar">
-                    <i class="fa-solid fa-user-plus fa-xs" style="color: #ffffff;"></i>
                     <a href="/register">Cadastrar</a>
                 </div>
+                <div id="campo-entrar">
+                    <input type="submit" value="Autenticar">
+                </div>
+            </div>
         </form>
 
     </main>

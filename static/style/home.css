@@ -19,7 +19,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 1rem;
     border: 1px solid;
     backdrop-filter: blur(20px);
@@ -56,8 +56,6 @@ main form{
     left: 10px;
 }
 
-/*  */
-
 /* INPUT TEXT & PASSWORD */
 input[type="text"],
 input[type="password"]{
@@ -73,22 +71,32 @@ input[type="password"]::placeholder{
     font-style: italic;
 }
 
-/*  */
 
 
 /* BOTOES */
 .botoes{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    margin: 3rem 0 1rem 0;
+    margin: 2rem 0 0 0;
 }
 
-.botoes a,
 .botoes input{
     background-color: #000000;
     color: #ffffff;
     border: none;
+    text-align: center;
+    text-decoration: none;
+    border-radius:0.5rem;
+    font-size: 1.3rem;
+    padding: 0.3rem 1rem;
+}
+
+.botoes a{
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    text-align: center;
     text-decoration: none;
     border-radius:0.5rem;
     font-size: 1.3rem;
@@ -106,21 +114,18 @@ input[type="password"]::placeholder{
     position: relative;
 }
 
-/*  */
 
 /* CAMPO REGISTRAR */
 #campo-registrar{
     position: relative;
 }
 
-/*  */
-/*  */
-
 /* Variaveis Flask */
 
 #msg{
     max-width: 220px;
     margin: 0;
+    padding: 0;
     text-align: center;
 }
 

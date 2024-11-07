@@ -16,35 +16,29 @@ def home():
         senha = request.form.get('senha')
         hash_senha = hashlib.sha256(senha.encode()).hexdigest()
     
-        def validar():
-
-            sql_consulta = "SELECT NOME,USUARIO, SENHA FROM USUARIOS WHERE USUARIO = %s"
-            
-            cursor.execute(sql_consulta, (usuario,))
-            
-            consulta = cursor.fetchall()
-            
-            if consulta == []:
-                flash("Usuario não encontrado")
-                return "Usuario não encontrado"
-            
-            else:
-                v_nome = [v_nome[0] for v_nome in consulta]
-                v_usuario = [v_usuario[1] for v_usuario in consulta]
-                v_senha = [v_senha[2] for v_senha in consulta]            
-                return v_nome,v_senha,v_usuario
-            
-        resultado = validar()
+        #Valida se o usuario existe e se a senha esta correta
+        sql_consulta = "SELECT NOME,USUARIO, SENHA FROM USUARIOS WHERE USUARIO = %s"
         
-        if resultado == "Usuario não encontrado":
-            flash(resultado)
+        cursor.execute(sql_consulta, (usuario,))
+        consulta = cursor.fetchall()
+        
+        if consulta == []:
+            flash("Usuario não existe!")
             return redirect("/")
-        else: 
-            return render_template("welcome.html")
         
+        linha = consulta[0]
+        
+        v_nome = linha[0]
+        v_usuario = linha[1]
+        v_senha = linha[2]
+        
+        if v_usuario == usuario and v_senha == hash_senha:
+             return render_template("welcome.html", nome = v_nome, usuario = v_usuario, senha = v_senha) 
+        else:
+            flash("Senha invalida!")
+            return redirect("/")
     else:
         return render_template("home.html")
-
 
 #Rota para cadastrar
 @sis_autenticar.route("/register", methods=['POST', 'GET'])
@@ -101,6 +95,7 @@ def cadastrar():
             sql_cadastra_usuario = "INSERT INTO USUARIOS(NOME,USUARIO,SENHA) VALUES(%s, %s, %s)"
             cursor.execute(sql_cadastra_usuario, dados)
             cnx.commit()
+            flash("Cadastrado com sucesso!")
             return redirect("/register")    
         
         except mysql.connector.Error as Erro:
