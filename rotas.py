@@ -4,10 +4,42 @@ import hashlib
 import mysql.connector
 from conexao import Conexao
 
-@sis_autenticar.route("/")
+#Rota para home
+@sis_autenticar.route("/", methods = ['POST', 'GET'])
 def home():
-    return render_template("home.html")
+    if request.method == 'POST':
+        
+        cnx = Conexao()
+        cursor = cnx.cursor()
+        
+        usuario = request.form.get('usuario')
+        senha = request.form.get('senha')
+        hash_senha = hashlib.sha256(senha.encode()).hexdigest()
+    
+        def validar():
 
+            sql_consulta = "SELECT NOME,USUARIO, SENHA FROM USUARIOS WHERE USUARIO = %s"
+            
+            cursor.execute(sql_consulta, (usuario,))
+            
+            consulta = cursor.fetchall()
+            
+            v_nome = [v_nome[0] for v_nome in consulta]
+            v_usuario = [v_usuario[1] for v_usuario in consulta]
+            v_senha = [v_senha[2] for v_senha in consulta]
+            
+            return v_nome,v_senha,v_usuario
+            
+        resultado = validar()
+        print(resultado)
+            
+
+        return render_template("welcome.html", usuario=usuario, senha=hash_senha)
+    else:
+        return render_template("home.html")
+
+
+#Rota para cadastrar
 @sis_autenticar.route("/register", methods=['POST', 'GET'])
 def cadastrar():
     
@@ -65,24 +97,9 @@ def cadastrar():
             return redirect("/register")    
         
         except mysql.connector.Error as Erro:
-            flash(f"Erro ao conectar com o banco de dados {Erro}")
+            flash(f"{Erro}")
             return redirect("/register")
     else:
         return render_template("register.html")
-
-
-@sis_autenticar.route("/welcome",  methods=['POST', 'GET'])
-def autentica():
-    
-    if request.method == 'POST':
-        
-        usuario = request.form.get('usuario')
-        senha = request.form.get('senha')
-        
-        hash_senha = hashlib.sha256(senha.encode()).hexdigest()
-        
-        return render_template("welcome.html", usuario=usuario, senha=hash_senha)
-    else:
-        return redirect('/')
 
 
