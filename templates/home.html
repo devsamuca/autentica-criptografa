@@ -11,7 +11,7 @@
     <main>
 
         <form action="/" method="POST">
-            <h1 id="titulo">Autenticar</h1>
+            <h1 id="titulo">Bem Vindo</h1>
             
             <div id="campo-usuario">
                 <label for="usuario">Usuario:</label>
@@ -27,20 +27,18 @@
                     <input type="password" name="senha" id="senha" placeholder="Digite seu usuario...">
                 </div>
             </div>
-
-            {%set mensagens = get_flashed_messages()%}
-            {%if mensagens%}
-                <div id="msg_flash">
-                    <p id="msg"> {{mensagens[0]}} </p>
-                </div>
-            {%endif%}
-
             <div class="botoes">
-                <div id="campo-registrar">
-                    <a href="/register">Cadastrar</a>
-                </div>
                 <div id="campo-entrar">
-                    <input type="submit" value="Autenticar">
+                    <input type="submit" value="Entrar">
+                </div>
+                {%set mensagens = get_flashed_messages()%}
+                {%if mensagens%}
+                    <div id="msg_flash">
+                        <p id="msg"> {{mensagens[0]}} </p>
+                    </div>
+                {%endif%}
+                <div id="campo-registrar">
+                    <a href="/register">Não possui conta? Criar Conta</a>
                 </div>
             </div>
         </form>

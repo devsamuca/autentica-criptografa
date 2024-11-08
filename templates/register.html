@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Samuel Souza">
     <link rel="stylesheet" href="../static/style/register.css">
-    <title>Cadastrar</title>
+    <title>Sistema de Autenticação - Cadastrar</title>
 </head>
 <body>
     <main>
@@ -36,13 +36,16 @@
                     <input type="password" name="senha" id="senha" placeholder="Digite sua senha...">
                 </div>
             </div>
-            {%set mensagens = get_flashed_messages()%}
-            {%if mensagens%}
-                <p id="msg"> {{mensagens[0]}} </p>
-            {%endif%}
+
             <div id="botoes">
-                <a href="/">Voltar</a>
                 <input type="submit" value="Cadastrar">
+
+                {%set mensagens = get_flashed_messages()%}
+                {%if mensagens%}
+                    <p id="msg"> {{mensagens[0]}} </p>
+                {%endif%}
+                
+                <a href="/">Ja possui uma conta? Entrar</a>
             </div>
         </form>
     </main>
