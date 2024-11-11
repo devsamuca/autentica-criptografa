@@ -7,8 +7,8 @@
 }
 
 body{
-    overflow: hidden;
     height: 100vh;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,22 +16,62 @@ body{
 
 main{
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 1px 15px;
+    border-radius: 2rem;
+}
+
+#form2{
+    display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
-    border-radius: 1rem;
-    border: 1px solid;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 1px 15px;
+    flex-direction: column;
+    background-color: #000000;
+    border-bottom-right-radius: 2rem;
+    border-top-right-radius: 2rem;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    padding: 4rem;
+}
+
+#form2 h1{
+    color: #ffffff;
+}
+
+#form2 p{
+    color: #ffffff;
+    text-align: center;
+}
+
+#form2 #sociais{
+    margin-top: 1rem;
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+}
+
+img{
+    transition: 0.5s ease;
+    height: 1.5rem;
+}
+
+img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
 }
 
 main form{
     min-width: 17rem;
+    padding: 3rem;
 }
 
 #titulo{
     text-align: center;
+    margin: 0 0 2.5rem 0;
 }
 
 #campo-usuario,
@@ -51,21 +91,28 @@ main form{
 #ipt-usuario i,
 #ipt-senha i{
     position: absolute;
-    top: 8px;
+    top: 5px;
     left: 10px;
 }
 
 input[type="text"],
 input[type="password"]{
     padding: 7px 7px 7px 35px ;
-    border-radius: 1rem;
-    background-color: #ffffff00;
     border: 1px solid #000000;
+    background-color: #00000000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus{
+outline: none;
 }
 
 input[type="text"]::placeholder,
 input[type="password"]::placeholder{
-    color: #000000c6;
+    color: #414141c6;
     font-style: italic;
 }
 
@@ -79,7 +126,6 @@ input[type="password"]::placeholder{
     border: none;
     text-align: center;
     text-decoration: none;
-    border-radius:0.5rem;
     font-size: 1.2rem;
     padding: 0.3rem 1rem;
     margin: 0 0 1rem 0 ;
@@ -110,7 +156,6 @@ input[type="password"]::placeholder{
     position: relative;
 }
 
-
 #msg{
     max-width: 220px;
     margin: 0;
@@ -123,3 +168,28 @@ input[type="password"]::placeholder{
     justify-content: center;
     align-items: center;
 }
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    #form2 {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        width: 100vw;
+        height: auto;
+        padding: 0.5rem;
+    }
+
+    #form2 {
+        display: none;
+    }
+} 

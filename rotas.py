@@ -23,7 +23,7 @@ def home():
         consulta = cursor.fetchall()
         
         if consulta == []:
-            flash("Esse usuario não existe!")
+            flash("Esse u suario não existe!")
             return redirect("/")
         
         linha = consulta[0]

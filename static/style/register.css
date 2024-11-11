@@ -17,24 +17,62 @@ body{
 
 main{
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 1.2rem;
-    border: 1px solid;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 1px 1;
-    padding: 0.5rem;
-    min-width: 20rem;
+    border: none;
+    backdrop-filter: blur(12px);
     box-shadow: 0 1px 15px;
+    border-radius: 2rem;
 }
 
 #titulo{
     margin: 1rem 0 2rem 0;
+    text-align: center;
 }
 
 main form{
+    margin: 3rem;
     min-width: 16rem;
+}
+
+#form2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000000;
+    border-bottom-right-radius: 2rem;
+    border-top-right-radius: 2rem;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    padding: 4rem;
+}
+
+#form2 h1{
+    color: #ffffff;
+}
+
+#form2 p{
+    color: #ffffff;
+    text-align: center;
+}
+
+#form2 #sociais{
+    margin-top: 1rem;
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+}
+
+img{
+    transition: 0.5s ease;
+    height: 1.5rem;
+}
+
+img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
 }
 
 #titulo{
@@ -71,9 +109,11 @@ main form{
 #ipt-usuario input,
 #ipt-senha input{
     padding: 7px 7px 7px 35px ;
-    border-radius: 1rem;
     background:#00000000;
     border: 1px solid #000000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }
 
 #ipt-nome i,
@@ -81,13 +121,14 @@ main form{
 #ipt-senha i{
     position: absolute;
     left: 10px;
-    top: 9px;
+    top: 6px;
 }
 
 input::placeholder,
 input:focus{
     color: #000000c6;
     outline-color: #000000;
+    outline: none;
 }
 
 #botoes{
@@ -100,7 +141,6 @@ input:focus{
     border: none;
     font-size: 1.2rem;
     padding: 0.3rem 1rem;
-    border-radius: 0.5rem;
     width: 100%;
     transition: 0.5s;
     margin: 1rem 0 0 0;
@@ -124,4 +164,31 @@ input:focus{
     width: 100%;
     margin: 0;
     text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        width: 90vw;
+        height: auto;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    #form2 {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        width: 100vw;
+        height: auto;
+        padding: 0.5rem;
+    }
+
+    #form2 {
+        display: none;
+    }
 }

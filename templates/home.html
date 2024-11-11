@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Samuel Souza">
     <link rel="stylesheet" href="../static/style/home.css">
-    <title>Sistema de Autenticação</title>
+    <link rel="shortcut icon" href="../static/img/identificar.png" type="image/x-icon">
+    <title>Sistema de Autenticação - Entrar</title>
 </head>
 <body>
     <main>
 
         <form action="/" method="POST">
-            <h1 id="titulo">Bem Vindo</h1>
+            <h1 id="titulo">Entrar </h1>
             
             <div id="campo-usuario">
                 <label for="usuario">Usuario:</label>
@@ -38,12 +39,29 @@
                     </div>
                 {%endif%}
                 <div id="campo-registrar">
-                    <a href="/register">Não possui conta? Criar Conta</a>
+                    <a href="/register">Não possui Conta? Criar conta</a>
                 </div>
             </div>
         </form>
-
+        <div id="form2">
+            <h1>Bem Vindo</h1>
+            <div>
+                <p>Este é um sistema de autenticação de usuarios</p>
+                <p>utilizando o metodo de criptografia SHA256 ao armazenar</p>
+                <p>as senhas dos usuarios em um banco de dados, e nessa tela</p>
+                <p>do sistema é possivel fazer a autenticação de um usuario ja cadastrado.</p>
+            </div>
+            <div id="by">
+                <p>Desenvolvido por Samuel Souza &#127801</p>
+            </div>
+            <div id="sociais">
+                <a href="https://www.instagram.com/samuca.io/" target="_blank" rel="noopener"><img id="insta" src="../static/img/instagramblack.png"></a>
+                <a href="https://www.linkedin.com/in/devsamuca/"  target="_blank" rel="noopener"><img id="linkedin" src="../static/img/linkedinblack.png"></a>
+                <a href="https://www.youtube.com/@iosamuca" target="_blank" rel="noopener"><img id="youtube" src="../static/img/youtubeblack.png"></a>
+            </div>
+        </div>
     </main>
     <script src="https://kit.fontawesome.com/f59b0f7f02.js" crossorigin="anonymous"></script>    
+    <script src="../static/script/home.js"></script>
 </body>
 </html>
