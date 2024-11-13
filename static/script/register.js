@@ -31,3 +31,15 @@ youtube.addEventListener("mouseleave", function() {
     youtube.src = '../static/img/youtubeblack.png'
 });
 
+//Spotify
+let spotify = document.getElementById("spotify")
+
+spotify.addEventListener("mouseenter", function() {
+    spotify.src = '../static/img/spotify.png'
+});
+
+spotify.addEventListener("mouseleave", function() {
+    spotify.src = '../static/img/spotifyblack.png'
+});
+
+

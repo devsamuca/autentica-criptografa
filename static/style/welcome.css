@@ -1,0 +1,264 @@
+@charset "utf-8";
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    color: #000000;
+    font-family: "Fira Sans Condensed", sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main{
+    box-shadow: 0 1px 15px;
+    border-radius: 2rem;
+    padding: 0;
+    display: flex;
+}
+
+h1{
+    text-align: center;
+}
+
+
+#area2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000000;
+    padding: 3rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+#area2 h1,p{
+    color: white;
+}
+
+#area2 p{
+    text-align: center;
+}
+
+img{
+    transition: 0.5s ease;
+    height: 1.5rem;
+}
+
+img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+input[type="text"]:focus{
+    outline: none;
+}
+
+#areabotao{
+    margin: 1rem 0;
+    position: relative;
+    transition: ease 0.5s;
+}
+
+#areabotao:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#areabotao i{
+    position: absolute;
+    left: 70px;
+    top: 2px;
+}
+
+#vmais{
+    text-decoration: none;
+    background-color: #ffffff;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    border: none;
+    border-radius: 0.3rem;
+    box-shadow: 0 1px 4px #ffffff;
+    font-weight: 500;
+}
+
+#areacopiar{
+    margin: 2rem 0;
+    position: relative;
+    transition: ease 0.5s;
+}
+
+#areacopiar:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#areacopiar i{
+    position: absolute;
+    left: 90px;
+    top: 7px;
+}
+
+#copiar{
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #000000;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    border: none;
+    border-radius: 0.3rem;
+    box-shadow: 0 1px 4px #000000;
+    font-weight: 500;
+}
+
+#copiar:hover{
+    cursor: pointer;
+}
+
+#area1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 4rem;
+}
+
+#area1 p{
+    color: #000000;
+    padding: 0;
+    margin: 0;
+}
+
+#sociais{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#nome{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#nome p{
+    margin: 0 1rem;
+}
+
+#ipt-nome input{
+    padding-left: 2rem;
+    padding-bottom: 7px;
+    width:80%;
+    padding-right: 5px;
+    border: 1px solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#ipt-nome{
+    position: relative;
+}
+
+#ipt-nome i{
+    position: absolute;
+    left: 5px;
+    top: 2px
+}
+
+#usuario{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#usuario p{
+    margin: 0 1rem;
+}
+
+#ipt-usuario input{
+    padding-left: 2rem;
+    padding-bottom: 7px;
+    width:80%;
+    padding-right: 5px;
+    border: 1px solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#ipt-usuario{
+    position: relative;
+}
+
+#ipt-usuario i{
+    position: absolute;
+    left: 2px;
+    top: 2px
+}
+
+#senha{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#senha p{
+    margin: 0 1rem;
+}
+
+#ipt-senha input{
+    padding-left: 2rem;
+    padding-bottom: 7px;
+    width:80%;
+    padding-right: 5px;
+    border: 1px solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#ipt-senha{
+    position: relative;
+}
+
+#ipt-senha i{
+    position: absolute;
+    left: 5px;
+    top: 2px
+}
+
+/* #senha{
+    display: none;
+} */
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    #area2 {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        width: 100vw;
+        height: auto;
+        padding: 0.5rem;
+    }
+
+    #area2 {
+        display: none;
+    }
+} 

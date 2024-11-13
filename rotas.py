@@ -23,7 +23,7 @@ def home():
         consulta = cursor.fetchall()
         
         if consulta == []:
-            flash("Esse u suario não existe!")
+            flash("Esse usuario não existe!")
             return redirect("/")
         
         linha = consulta[0]
@@ -84,7 +84,7 @@ def cadastrar():
                 
                 
             # Verifica o tamanho da senha
-            if len(senha) < 10:
+            if len(senha) < 8:
                 flash("Sua senha deve ter pelo menos 10 caracteres!")
                 return render_template("register.html")
             

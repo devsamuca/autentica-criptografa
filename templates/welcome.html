@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Samuel Souza">
+    <link rel="stylesheet" href="../static/style/welcome.css">
     <link rel="shortcut icon" href="../static/img/identificar.png" type="image/x-icon">
     {%if usuario%}
         <title>Sistema de Autenticação - Bem Vindo {{usuario}}</title>
@@ -12,9 +13,57 @@
     {%endif%}
 </head>
 <body>
-    <h1>Nome: {{nome}},<br>
-        Usuario: {{usuario}} <br>
-        Senha: {{senha}}
-    </h1>
+    <main>
+        <div id="area1"> 
+            <h1>Informações</h1>
+
+            <div id="nome">
+                <p>Nome: </p>
+                <div id="ipt-nome">
+                    <i class="fa-solid fa-user" style="color: #000000;"></i>
+                    <input type="text" value="{{nome}}" readonly>
+                </div>
+            </div>
+
+            <div id="usuario">
+                <p>Usuario: </p>
+                <div id="ipt-usuario">
+                    <i class="fa-solid fa-address-card" style="color: #000000;"></i>
+                    <input type="text" value="{{usuario}}" readonly>
+                </div>
+            </div>
+
+            <div id="areacopiar">
+                <i class="fa-solid fa-copy" style="color: #ffffff;"></i>
+                <button id="copiar">Copiar Senha</button>
+            </div>
+        </div>
+
+        <div id="area2"> 
+            <h1>Informações da sua conta</h1>
+            <div>
+                <p>Obrigado por se cadastrar em meu sistema.</p>
+                <p>Sua senha foi criptografada utilizando a criptografia SHA256,</p>
+                <p>você pode saber mais sobre esse tipo de criptografia através do link abaixo</p>
+            </div>
+
+            <div id="areabotao">
+                <i class="fa-solid fa-arrow-right-to-bracket" style="color: #000000;"></i>
+                <a href="https://www.hashtagtreinamentos.com/criptografia-e-sha256-python" id="vmais" target="_blank" rel="noopener">Ver mais</a>
+            </div>
+
+            <div id="by">
+                <p>Desenvolvido por Samuel Souza &#127801</p>
+            </div>
+            <div id="sociais">
+                <a href="https://www.instagram.com/samuca.io/" target="_blank" rel="noopener"><img id="insta" src="../static/img/instagramblack.png"></a>
+                <a href="https://www.linkedin.com/in/devsamuca/"  target="_blank" rel="noopener"><img id="linkedin" src="../static/img/linkedinblack.png"></a>
+                <a href="https://www.youtube.com/@iosamuca" target="_blank" rel="noopener"><img id="youtube" src="../static/img/youtubeblack.png"></a>
+                <a href="" target="_blank" rel="noopener"><img id="spotify" src="../static/img/spotifyblack.png"></a>
+            </div>
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/f59b0f7f02.js" crossorigin="anonymous"></script>
+    <script src="../static/script/welcome.js"></script> 
 </body>
 </html>
