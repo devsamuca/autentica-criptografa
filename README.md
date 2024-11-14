@@ -14,10 +14,10 @@ Esse projeo consiste em uma aplicação web desenvolvida utilizando o framework 
 
 Para rodar essa aplicação em sua maquina, serão necessarios:
 
-[Windows 10 ou Superior](https://www.microsoft.com/pt-br/software-download/windows10iso)
-[Python 3.12 ou Superior](https://www.python.org/downloads/)
-[MySql Server & Workbench](https://dev.mysql.com/downloads/workbench/)
-[Navegador de sua preferencia](https://rockcontent.com/br/blog/navegador/)
+- [Windows 10 ou Superior](https://www.microsoft.com/pt-br/software-download/windows10iso)
+- [Python 3.12 ou Superior](https://www.python.org/downloads/)
+- [MySql Server & Workbench](https://dev.mysql.com/downloads/workbench/)
+- [Navegador de sua preferencia](https://rockcontent.com/br/blog/navegador/)
 
 Bibliotecas Python necessarias:
     [flask](https://flask.palletsprojects.com/en/stable/)
