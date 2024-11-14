@@ -34,8 +34,7 @@ h1{
     flex-direction: column;
     background-color: #000000;
     padding: 3rem;
-    border-top-right-radius: 2rem;
-    border-bottom-right-radius: 2rem;
+    border-radius: 2rem;
 }
 
 #area2 h1,p{
@@ -202,41 +201,8 @@ input[type="text"]:focus{
     top: 2px
 }
 
-#senha{
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
 
-#senha p{
-    margin: 0 1rem;
-}
 
-#ipt-senha input{
-    padding-left: 2rem;
-    padding-bottom: 7px;
-    width:80%;
-    padding-right: 5px;
-    border: 1px solid;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-}
-
-#ipt-senha{
-    position: relative;
-}
-
-#ipt-senha i{
-    position: absolute;
-    left: 5px;
-    top: 2px
-}
-
-/* #senha{
-    display: none;
-} */
 
 @media (max-width: 768px) {
     main {

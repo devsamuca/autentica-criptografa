@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, redirect, request, flash
+from flask import Flask, render_template, url_for, redirect, request, flash, jsonify
 from sis_autenticar import sis_autenticar
 import hashlib
 import mysql.connector
@@ -33,7 +33,7 @@ def home():
         v_senha = linha[2]
         
         if v_usuario == usuario and v_senha == hash_senha:
-             return render_template("welcome.html", nome = v_nome, usuario = v_usuario, senha = v_senha) 
+            return render_template("welcome.html", nome = v_nome, usuario = v_usuario) 
         else:
             flash("Senha invalida!")
             return redirect("/")

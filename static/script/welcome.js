@@ -42,8 +42,4 @@ spotify.addEventListener("mouseleave", function() {
     spotify.src = '../static/img/spotifyblack.png'
 });
 
-let copiar = document.getElementById("copiar")
-copiar.addEventListener("click", function(){
-    let senha = document.getElementById("senha")
-})
 
