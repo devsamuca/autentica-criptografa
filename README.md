@@ -1,12 +1,13 @@
-# Sistema de Autenticação de Usuarios!
+# Sistema de Autenticação e Criptografia!
 
-Esse projeo consiste em uma aplicação web desenvolvida utilizando o framework Flask da linguagem Python para realizar um cadastro passando como parametros, seu nome, um nome de usuario, e uma senha que será criptografada antes de ser armazenada em um banco de dados MySql, a criptografia utilizada foi a SHA256, essa criptografia foi desenvolvida pela Agencia de Sergurança Nacional dos EUA. Após o cadastro o usuario ja pode efetuar o login utilizando seu nome de usuario e a sua senha. 
+Esse projeo consiste em uma aplicação web desenvolvida utilizando o framework Flask da linguagem Python para realizar um cadastro, passando como parametros, seu nome, um nome de usuario, e uma senha que será criptografada antes de ser armazenada em um banco de dados MySql, a criptografia utilizada foi a SHA256, essa criptografia foi desenvolvida pela Agencia de Sergurança Nacional dos EUA. Após o cadastro o usuario ja pode efetuar o login utilizando seu nome de usuario e a sua senha. 
 
 ## 🚀 Começando
 
 - Para clonar esse projeto para um repositorio em sua maquina local você deve primeiro [Instalar o Git](https://git-scm.com/downloads) 
 - Em seguida você deverá abrir o terminal git e ir até o diretorio onde o repositorio será clonado.
-- Após isso, execute o comando "git clone https://github.com/devsamuca/sistema-autenticar.git"
+- Após isso, execute o comando
+    - git clone https://github.com/devsamuca/sistema-autenticar.git
 - Agora o repositorio ja está em seu computador com todos os arquivos e dependencias nessarias.
 
 ### 📋 Pré-requisitos
@@ -55,6 +56,7 @@ Para desenvolver esse projeto, eu utilizei as seguintes liguagens e ferramentas.
 
 * [Python](https://www.w3schools.com/python/default.asp) - Linguagem utilizada no Servidor.
 * [MySql Connector](https://www.mysql.com/products/connector/) - Driver para estabelecer a conexão com o banco de dados.
+* [HashLib](https://docs.python.org/3/library/hashlib.html) - Biblioteca para criptografar a senha.
 * [Flask](https://flask.palletsprojects.com/en/stable/) - FrameWork Web para desenvolver a aplicação.
 * [Html](https://www.w3schools.com/html/default.asp) - Linguagem para estruturar as paginas.
 * [Css](https://www.w3schools.com/css/default.asp) - Linguagem para adicionar estilos nas paginas.
