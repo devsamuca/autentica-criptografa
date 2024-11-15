@@ -7,17 +7,17 @@ Esse projeo consiste em uma aplicação web desenvolvida utilizando o framework 
 - Para clonar esse projeto para um repositorio em sua maquina local você deve primeiro [Instalar o Git](https://git-scm.com/downloads) 
 - Em seguida você deverá abrir o terminal git e ir até o diretorio onde o repositorio será clonado.
 - Após isso, execute o comando
-    - git clone https://github.com/devsamuca/sistema-autenticar.git
+    - git clone https://github.com/devsamuca/autentica-criptografa.git
 - Agora o repositorio ja está em seu computador com todos os arquivos e dependencias nessarias.
 
 ### 📋 Pré-requisitos
 
 Para rodar essa aplicação em sua maquina, serão necessarios:
 
-[Windows 10 ou Superior](https://www.microsoft.com/pt-br/software-download/windows10iso)
-[Python 3.12 ou Superior](https://www.python.org/downloads/)
-[MySql Server & Workbench](https://dev.mysql.com/downloads/workbench/)
-[Navegador de sua preferencia](https://rockcontent.com/br/blog/navegador/)
+- [Windows 10 ou Superior](https://www.microsoft.com/pt-br/software-download/windows10iso)
+- [Python 3.12 ou Superior](https://www.python.org/downloads/)
+- [MySql Server & Workbench](https://dev.mysql.com/downloads/workbench/)
+- [Navegador de sua preferencia](https://rockcontent.com/br/blog/navegador/)
 
 Bibliotecas Python necessarias:
     [flask](https://flask.palletsprojects.com/en/stable/)
