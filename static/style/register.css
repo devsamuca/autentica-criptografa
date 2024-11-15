@@ -172,7 +172,7 @@ input:focus{
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 738px) {
     main {
         flex-direction: column;
         width: 90vw;

@@ -42,4 +42,18 @@ spotify.addEventListener("mouseleave", function() {
     spotify.src = '../static/img/spotifyblack.png'
 });
 
+const botao = document.getElementById("copiar")
+const areacopiar = document.getElementById("areacopiar")
 
+function copiarSenha(){
+    let senha = document.getElementById("senha").innerText;
+    navigator.clipboard.writeText(senha)
+    botao.innerText = "Senha Copiada"
+    
+    setTimeout(() => {
+        botao.innerText = "Copiar a Senha"
+    }, 1500);
+    
+}
+
+areacopiar.addEventListener("click", copiarSenha)

@@ -32,10 +32,11 @@ Bibliotecas Python necessarias:
     - pip install mysql-connector
 - Após isso baixe o MySql Installer e o execute.
 - Utilizando o MySql Installer instale o MySql Server e o MySql Workbench.
-- Defina a senha do usuario root como "root".
+- Defina a senha do usuario root como "Root".
+- Em seguida faça a importação do arquivo dump.sql para o seu servidor mysql.
 - Feito tudo isso, abra o terminal git novamente e navegue até a pasta raiz do projeto.
 - Com a pasta raiz aberta execute o seguinte comando
-    - python sis_autenticar.py
+    - python main.py
 - Feito isso o servidor já estará funcionando e você poderá acessa-lo digitando "localhost" em seu navegador
 
 ## ⚙️ Executando os testes
@@ -68,6 +69,6 @@ Para desenvolver esse projeto, eu utilizei as seguintes liguagens e ferramentas.
 
 Observe as [tags neste repositório](https://github.com/devsamuca/sistema-autenticar/tags) para ver as versões desse sistema. 
 
-## ✒️ Autores
+## ✒️ Autor
 
 Desenvolvido por Samuel Souza 🌹

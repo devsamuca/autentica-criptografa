@@ -2,10 +2,10 @@ import mysql.connector
 
 def Conexao():
         conexao = mysql.connector.connect(
-            host="192.168.0.200",
-            user="samuca",
-            password="8415",
-            database="dbsamuca"
+            host="localhost",
+            user="root",
+            password="Root",
+            database="local"
         ) 
         if conexao.is_connected():
             return conexao

@@ -99,7 +99,7 @@ input[type="text"]:focus{
 
 #areacopiar i{
     position: absolute;
-    left: 90px;
+    left: 97px;
     top: 7px;
 }
 
@@ -201,10 +201,13 @@ input[type="text"]:focus{
     top: 2px
 }
 
+#senha{
+    position: absolute;
+    left: -1000px;
+    top: -1000px;
+}
 
-
-
-@media (max-width: 768px) {
+@media (max-width: 738px) {
     main {
         flex-direction: column;
         height: auto;
