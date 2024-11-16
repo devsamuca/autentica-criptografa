@@ -39,6 +39,7 @@ Bibliotecas Python necessarias:
     - python main.py
 - Feito isso o servidor já estará funcionando e você poderá acessa-lo digitando "localhost" em seu navegador
 
+
 ## ⚙️ Executando os testes
 
 Esse sistema permite que você cadastre usuarios e realize o login com os dados de um usuario ja cadastrado.
@@ -72,3 +73,19 @@ Observe as [tags neste repositório](https://github.com/devsamuca/sistema-autent
 ## ✒️ Autor
 
 Desenvolvido por Samuel Souza 🌹
+
+## 🧑‍💻 Apresentação
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://www.youtube.com/watch?v=1MSxxHeJKfY&t=3s">
+        <img src="static/img/thumb.png" width="400px;" align/><br>
+        <sub>
+        <b>Sistema de autenticação e criptografia com Flask!</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
