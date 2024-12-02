@@ -80,7 +80,7 @@ Desenvolvido por Samuel Souza 🌹
   <tr>
     <td align="center">
       <a href="https://www.youtube.com/watch?v=1MSxxHeJKfY&t=3s">
-        <img src="static/img/thumb.png" width="400px;" align/><br>
+        <img src="static/img/thumb.jpg" width="400px;" align/><br>
         <sub>
         <b>Sistema de autenticação e criptografia com Flask!</b>
         </sub>
