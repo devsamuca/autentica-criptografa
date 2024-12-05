@@ -7,7 +7,7 @@ Esse projeo consiste em uma aplicação web desenvolvida utilizando o framework 
 - Para clonar esse projeto para um repositorio em sua maquina local você deve primeiro [Instalar o Git](https://git-scm.com/downloads) 
 - Em seguida você deverá abrir o terminal git e ir até o diretorio onde o repositorio será clonado.
 - Após isso, execute o comando
-    - git clone https://github.com/devsamuca/autentica-criptografa.git
+    - git clone https://github.com/devsamuca/autenticação-criptografia.git
 - Agora o repositorio ja está em seu computador com todos os arquivos e dependencias nessarias.
 
 ### 📋 Pré-requisitos
