@@ -68,7 +68,7 @@ Para desenvolver esse projeto, eu utilizei as seguintes liguagens e ferramentas.
 
 ## 📌 Versão
 
-Observe as [tags neste repositório](https://github.com/devsamuca/sistema-autenticar/tags) para ver as versões desse sistema. 
+Observe as [tags neste repositório](https://github.com/devsamuca/autenticação-criptografia/tags) para ver as versões desse sistema. 
 
 ## ✒️ Autor
 
